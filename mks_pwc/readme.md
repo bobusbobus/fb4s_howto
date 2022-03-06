@@ -34,6 +34,7 @@
 ```
 
 На платах Robin Nano-s 1.3 уже есть разъемы для подключения. Они обозначены соотвественно PW-OFF и PW_DET. Ноги указаны в Marlin/src/pins/stm32f1/pins_MKS_ROBIN_NANO_common.h, PB2 для PS_ON_PIN и PA2 для KILL_PIN.
+
 Для платы Robin Nano 1.2, или других плат, где нет специального разъема для этого или нужно использовать другие ноги, их нужно указать в Marlin/src/pins/stm32f1/pins_MKS_ROBIN_NANO.h:
 
 ```
@@ -42,7 +43,7 @@
     #undef KILL_PIN
     #undef KILL_PIN_STATE
 
-    #define PS_ON_PIN                         PE5
+    #define PS_ON_PIN                         PB2
     #define KILL_PIN                          PA2
     #define KILL_PIN_STATE                    HIGH
 #endif
